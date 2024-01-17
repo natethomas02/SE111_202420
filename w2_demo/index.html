@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="author" content="NThomas" >
+    <meta name="description" content="W2D2 Demo" >
+    
+    <title>W2 | Demo</title>
+    <!--in document styling-->
+    <style>
+        /*in here we write css*/
+
+        /*selecting elements in css and js
+
+        selector {
+            property:value;
+            property:value;
+        }
+
+        ways to select:
+        * by element type (all elements of type are styled)
+        * by ID name (only that element is styled)
+        * by class name (only elements in that class are styled)
+        */
+
+        /* by element*/
+        div {
+            /* all div elements will have te below styles*/ 
+            border:1px solid black;
+            margin:10px; /*adds space between border and other elements, all 4 sides*/
+            padding:10px; /* adds space between element content and border , all 4 sides*/
+        }
+
+        /*by ID*/
+
+        #header {
+            border:3px solid blue;
+        }
+
+        /* by CLASS*/ 
+        .bg {
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body style="background-color: lightgrey;">
+    <!--Wrapper - Wraps around all content-->
+    <div id="wrapper">
+        <!--Header-->
+        <div id="header" class="bg"> 
+            <h1>Week 2 Demo</h1> <!--only 1 h1 per page - seo -->
+            <h2>Attributes, <i>Links</i>, and Images</h2>
+        </div> 
+        <!--Nav Bar-->
+        <div id="nav"> 
+
+            <!--external links : links outside our website-->
+            <a href="https://www.meca.edu" target="_blank">Visit Meca!</a>
+
+            <br>
+
+            <!-- internal links : links to pages inside our site (relative paths)-->
+            <a href="text.txt">Open my Text File</a>
+            <br>
+
+            <!-- internal JUMP links : jumps to a section based on #id in current page-->
+            <a href="#bio">BIO</a>
+            <a href="#schools">SCHOOLS</a>
+            <a href="#hobbies">HOBBIES</a>
+
+            <br>
+
+            <a href="">Bottom of Page!</a>
+
+
+        </div> 
+
+        <!--BIO-->
+        <div id="bio"> 
+            <h2>My bio - ALL about me</h2>
+            <p> Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p> <!-- word wrap on: alt+z-->
+        </div> 
+        <!--Schools-->
+        <div id="schools">
+            <h2>My schooling</h2> 
+            
+            <!-- ordered list-->
+            <ol>
+                <li>NEIT 2023</li>
+                <li>Massasoit 2021</li>
+            </ol>
+
+            <!-- Images : require src and alt attributes-->
+
+            <!-- Absolute paths : using images from other sites -- Avoid ---> 
+            <img src="https://hips.hearstapps.com/hmg-prod/images/brienne-ned-game-of-thrones-1556025697.jpg?crop=0.486xw:0.973xh;0.514xw,0&resize=980:*" alt="ned stark holding ice the great sword." height="500" width="500">
+
+            <!--Relative paths : using images from current site's root folder-->
+
+            <img src="images/meca.jpg" alt="porteous building at sunset" height="300" width="500">
+        </div>
+
+        <!--Hobbies-->
+        <div id="hobbies"> 
+            <h2>Things I like to do</h2>
+            <!--unordered list-->
+            <ul>
+                <li>Game of thrones!</li>
+                <li>Reading</li>
+                <li>Hang out with the four legged freeloaders</li>
+
+            
+            </ul>
+
+            <img src="images/stormsEnd.jpg" alt="Storm's End castle" width= "500">
+        </div>
+
+        <!--Footer-->
+        <div id="footer" class="bg" style="text-align: center;">
+
+            <a href="">Back to the top!</a>
+            <p>&copy;N Thomas  SE111  202420</p>
+
+            <!-- include validation screenshot below-->
+            <img src="images/valid.png" alt="validation screenshot">
+
+        </div>
+
+    </div><!--/Wrapper-->
+</body>
+</html>
