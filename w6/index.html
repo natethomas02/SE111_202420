@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nate Thomas">
+    <meta name="description" content="Nate's Payroll Calculator">
+    <title>Payroll Calculator</title>
+</head>
+<body>
+    
+
+    <img src="../w6/images/62649e4d3f96f.jpeg" alt="tax meme">
+    <script>
+            // calculate gross pay
+        function calculate_gross_pay(hourly_pay, hours_worked) {
+            return hourly_pay * hours_worked * 2; // * 2 for two week period
+        }
+
+            // calculate tax amount
+        function calculate_tax(gross_pay, tax_rate) {
+            return gross_pay * tax_rate;
+        }
+
+            // calculate net pay
+        function calculate_net_pay(gross_pay, tax_amount) {
+            return gross_pay - tax_amount;
+        }
+
+        
+        function main() {
+            //  Ask user to enter data 
+            var hourly_pay = Number(prompt("Enter your hourly pay:"));
+            var hours_worked = Number(prompt("Enter the number of hours worked per week:"));
+
+            // Calculate gross pay
+            var gross_pay = calculate_gross_pay(hourly_pay, hours_worked);
+
+            // Calculate tax amount 
+            var tax_rate = 0.20;
+            var tax_amount = calculate_tax(gross_pay, tax_rate);
+
+            // Calculate net pay
+            var net_pay = calculate_net_pay(gross_pay, tax_amount);
+
+            // Display results
+            alert("Gross Pay: $" + gross_pay.toFixed(2) + "\nUncle Sam's Share: $" + tax_amount.toFixed(2) + "\nNet Pay: $" + net_pay.toFixed(2));
+            console.log("Gross Pay: $" + gross_pay.toFixed(2));
+            console.log("Uncle Sam's Share: $" + tax_amount.toFixed(2));
+            console.log("Net Pay: $" + net_pay.toFixed(2));
+        }
+
+        // Call the main function
+        main();
+    </script>
+</body>
+</html>
