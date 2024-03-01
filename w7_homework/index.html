@@ -9,10 +9,10 @@
     <meta name="author" content="Nate"> 
     <meta name="description" content="">
 
-    <title>W7 | JS Pay Form</title>
+    <title>W7 | JS Pay Calculator</title>
 </head>
 <body>
-    <h1>W7 Javascript Pay Calculator Form</h1>
+    <h1>W7 Javascript Pay Calculator</h1>
 
     <!--FORM- Read through to get an idea of what your IDs are!-->
     <form style="border:1px solid blue;">
@@ -115,15 +115,15 @@
 
         */
 
-        const firstNameInput = document.getElementById('first');
-        const lastNameInput = document.getElementById('last');
-        const rateInput = document.getElementById('rate');
-        const hoursInput = document.getElementById('hours');
-        const infoDiv = document.getElementById('info');
-        const enterButton = document.getElementById('enter-button');
-        const confirmButton = document.getElementById('confirm-button');
+        const first_name_input = document.getElementById('first');
+        const last_name_input = document.getElementById('last');
+        const rate_input = document.getElementById('rate');
+        const hours_input = document.getElementById('hours');
+        const info = document.getElementById('info');
+        const enter_button = document.getElementById('enter-button');
+        const confirm_button = document.getElementById('confirm-button');
 
-        console.log(firstNameInput, lastNameInput, rateInput, hoursInput, infoDiv, enterButton, confirmButton);
+        console.log(first_name_input, last_name_input, rate_input, hours_input, info, enter_button, confirm_button);
 
         //PART2------adding event listeners------------------------
         /*
@@ -132,8 +132,8 @@
             add an event listener to the #confirm-button that runs a function called "confirmForm"
         */
 
-        enterButton.addEventListener('click', formData);
-        confirmButton.addEventListener('click', confirmData);
+        enter_button.addEventListener('click', form_data);
+        confirm_button.addEventListener('click', confirm_data);
 
         //PART3------building event functions----------------------
         /*
@@ -152,12 +152,12 @@
 
        function form_data(event)
        {
-            const fName = fNameInput.value;
-            const lName = lNameInput.value;
-            const rate = Number(rateInput.value);
-            const hours = Number(hoursInput.value);
+            const first_name = first_name_input.value;
+            const last_name = last_name_input.value;
+            const rate = Number(rate_input.value);
+            const hours = Number(hours_input.value);
             
-            const full_name = `${fName} ${lName}`;
+            const full_name = `${first_name} ${last_name}`;
             const gross_pay = rate * hours;
             const tax_amount = gross_pay * 0.1; 
             const net_pay = gross_pay - tax_amount;
@@ -167,7 +167,7 @@
             console.log("Tax Amount:", tax_amount.toFixed(2));
             console.log("Net Pay:", net_pay.toFixed(2));
 
-            infoDiv.innerHTML = `
+            info.innerHTML = `
                 <p><b>Full Name:</b> ${full_name}</p>
                 <p><b>Gross Pay:</b> $${gross_pay.toFixed(2)}</p>
                 <p><b>Tax Amount:</b> $${tax_amount.toFixed(2)}</p>
@@ -178,14 +178,14 @@
 
        function confirm_data(event)
        {
-            const fName = firstNameInput.value;
-            const lName = lastNameInput.value;
-            const rate = Number(rateInput.value);
-            const hours = Number(hoursInput.value);
+            const first_name = first_name_input.value;
+            const last_name = last_name_input.value;
+            const rate = Number(rate_input.value);
+            const hours = Number(hours_input.value);
             
-            const full_name = `${fName} ${lName}`;
+            const full_name = `${first_name} ${last_name}`;
             const gross_pay = rate * hours;
-            const tax_amount = grossPay * 0.1; 
+            const tax_amount = gross_pay * 0.1; 
             const net_pay = gross_pay - tax_amount;
 
             alert(
