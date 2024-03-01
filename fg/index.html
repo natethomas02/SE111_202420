@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--FILL OUT THE MISSING INFO-->
+    <meta name="author" content="">
+    <meta name="description" content="">
+
+    <title>W7 | JS Pay Form</title>
+</head>
+<body>
+    <h1>W7 Javascript Pay Calculator Form</h1>
+
+    <!--FORM- Read through to get an idea of what your IDs are!-->
+    <form style="border:1px solid blue;">
+        <table>
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="first" class="questions">FIRST: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="first" id="first">
+
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="last" class="questions">LAST: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="last" id="last">
+
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="rate" class="questions">Rate: $</label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="rate" id="rate">
+
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="hours" class="questions">Hours: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="hours" id="hours">
+
+                </td>
+            </tr>
+            <!--FORM SUBMIT BUTTON-->
+            <tr>
+                <!--left side: questions-->
+                
+                <td>
+                    <br>
+                    <br>
+                   <input type="button" id="enter-button" value="ENTER">
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    
+
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <!--these breaks are just for visual space-->
+    <br><br><br>
+
+    <h2>User's Information:</h2>
+    <!--BELOW IS WHERE YOUR USER'S INFO WILL GO!-->
+    <!--when you write your JS correctly, the form data will be written to the below space in your page-->
+    <div id="info" style="border:1px solid black; width:500px; height:200px;">
+    
+    </div><!--# info-->
+
+    <p><i>After reviewing the above, click CONFIRM to submit your data!</i></p>
+    <!--CONFIRMATION BUTTON- when this is clicked and your JS is correct, your user will see an alert() with their information-->
+    <input type="button" id="confirm-button" value="CONFIRM!">
+
+     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
+     <script>
+        //write JS in here
+
+        //PART1-----selecting and storing HTML elements------------
+        /*
+            declare names for each of the following elements in the document: body, h1, input, div, input buttons
+
+            use EITHER .querySelector() OR .getElementById
+
+            console.log() all of these elements once complete
+
+        */
+
+        //PART2------adding event listeners------------------------
+        /*
+            add an event listener to the #enter-button that runs a function called "formData"
+
+            add an event listener to the #confirm-button that runs a function called "confirmForm"
+        */
+
+
+        //PART3------building event functions----------------------
+        /*
+            formData() instructions: 
+                -store the input element values to descriptive names
+                -declare and create a "fullName" using the first and last values
+                -declare and create: grossPay, taxAmount, netPay
+                -console.log() the 4 values: fullName, grossPay, taxAmount, netPay
+                -write the information, with bolded labels in paragraph elements, to the #info div's innerHTML
+                -ensure all monetary values are displayed to the second decimal place (.toFixed(2))
+
+                    HINT EX: `<p><b>Full Name:</b> ${fullName}`
+
+                REMEMBER: form text field data is treated as a STRING so you will most likely need the Number() 
+
+
+            confirmForm() instructions:
+                -store the input element values to descriptive names
+                -declare and create a "fullName" using the first and last values
+                -declare and create: grossPay, taxAmount, netPay
+                -display all information (fullName, grossPay, taxAmount, netPay) to the user using ONE alert()
+                -each value should be on its own line (use `\n`) and ensure all monetary values are displayed to the second decimal place (.toFixed(2))
+                
+
+        */
+       function formData(event)
+       {
+            //EXTRA CREDIT---------+5pts-------------------------------
+            /*
+                Once your file is working, add ONE INSTRUCTION above this comment, but inside of the formData(), that makes sure if the user resubmits the form without reloading the page, only the new form info is displayed
+            */
+
+       }//formData()
+
+
+       function confirmData(event)
+       {
+
+       }//confirmData()
+
+
+    </script>
+    
+</body>
+</html>
