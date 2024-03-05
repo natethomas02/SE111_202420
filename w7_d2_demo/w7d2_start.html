@@ -88,7 +88,7 @@
     <br>
     <br>
 
-    <!--not just buttons can have click events!-->
+
 
     <p id="me">
         Click!
@@ -102,12 +102,12 @@
 
     <br><br><br><br><br>
     <p>end</p>
-    <!--IN-DOCUMENT JAVASCRIPT BELOW-->
+  
     <script>
         
         //we write JS in here 
         //using JS, select the body element from the file 
-        var body = document.querySelector(`body`)
+        var body = document.query_selector(`body`)
 
         console.log(body) //viewing the element 
 
@@ -115,19 +115,19 @@
 
         // access the attribute (property) value by using dot syntax
 
-        var bodyId = body.id
+        var body_id = body.id
 
         console.log(`Stored ID: ${bodyId} vs Object Line ID: ${body.id}`)
 
         body.id = `i-body-d`
-        bodyId = body.id
+        body_id = body.id
         
-        console.log(`Stored ID: ${bodyId} vs Object Line ID: ${body.id}`)
+        console.log(`Stored ID: ${body_id} vs Object Line ID: ${body.id}`)
 
 
         body.style.backgroundColor = "rgb(100, 100, 100)"
 
-        var hello = document.querySelector(`#hello`)
+        var hello = document.query_selector(`#hello`)
         console.log(hello)
 
         // innerHTML attribute - all elements with ope and close tags have!
@@ -138,7 +138,7 @@
         hello.innerHTML = `Goodbye world!`
 
         //add an event listener to the #enter button 
-        document.querySelector(` #enter-button`).addEventListener(`click`, formConfirm)
+        document.query_selector(` #enter-button`).addEventListener(`click`, form_confirm)
 
 
         // create some global names for the input elements
@@ -146,7 +146,7 @@
         var first = document.getElementById(`last`)
         var first = document.getElementById(`age`)
 
-        function formConfirm(event)
+        function form_confirm(event)
         {
             info.innerHTML = ``
             
@@ -169,10 +169,10 @@
 
         console.log(`User Entered: \nF: ${first.value}\nL: ${last.value}\nA: ${age.value}`)
 
-        document.getElementById(`me`).addEventListener(`click`, paraBtn)
+        document.getElementById(`me`).addEventListener(`click`, button)
         var me = document.getElementById(`me`)
 
-        function paraBtn(event)
+        function button(event)
         {
             me.style.fontSize = "36px"
             me.style.color = "magneta-"
